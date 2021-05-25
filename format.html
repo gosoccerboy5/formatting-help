@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet.css" />
+        <meta charset="UTF-8">
+        <title>Change indentation levels</title>
+    </head>
+    <body>
+        <h1>Do you have to deal with formatters that give you an indentation level you don't like?</h1>
+        <h2>Well this is the tool for you!</h2>
+        <p>Note: doesnt work for tabs</p>
+        <p>Just paste your code into the top area, set the amount of spaces you want to get to, and click the button!</p>
+        <p>Make sure to run it through <a href="./trim-whitespace.html">this</a> beforehand if you need to.</p>
+        <textarea id="input"></textarea><br><button id="format">Format with spaces</button><br>
+        From<input id="oldspaces" type="number">spaces to<input id="spaces" type="number">spaces 
+        <br><textarea id="output"></textarea>
+        <script>
+const input = document.querySelector("#input");
+const button = document.querySelector("#format");
+const number = document.querySelector("#spaces");
+const oldNumber = document.querySelector("#oldspaces");
+input.oninput = function () {
+    const match = this.value.match(/(\n|^) +/g);
+    oldNumber.value = match === null ? 2 : match[0].length - (/^ +/.test(this.value.split("\n")[0]) ? 0 : 1);
+    number.value = oldNumber.value === "4" ? 2 : 4;
+};
+input.oninput();
+String.prototype.times = function (amt) {
+    let temp = "";
+    for (let i = 0; i < amt; i++) {
+        temp += this;
+    }
+    return temp;
+};
+button.addEventListener("click", function (event) {
+    (function (target) {
+        document.querySelector("#output").value = (
+            target.value.replaceAll(/(\n|^) +/g, n => "\n" + " ".times(n.substring(1).length * Number(number.value) / (Number(oldNumber.value))))
+        );
+    })(input);
+});
+document.querySelector("#output").ondblclick = function () {
+    this.select();
+};
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+textarea {
+    width: 500px;
+    height: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+label {
+    user-select: none;
+}
+
+button {
+    border: none;
+    background: rgb(144, 220, 245);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:active {
+    background: rgb(22, 118, 243);
+}
+a {
+    color: blue;
+}
+h1, h2 {
+    font-weight: 500;
+}
