@@ -24,9 +24,16 @@ button {
 button:active {
     background: rgb(22, 118, 243);
 }
+
 a {
     color: blue;
+    text-decoration: none;
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
 h1, h2 {
     font-weight: 500;
 }
