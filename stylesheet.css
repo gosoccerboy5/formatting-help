@@ -6,6 +6,12 @@ textarea {
     border: 2px solid black;
 }
 
+textarea:focus {
+    outline: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
 html {
     font-family: sans-serif;
 }
