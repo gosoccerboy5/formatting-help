@@ -4,6 +4,7 @@ textarea {
     margin-top: 10px;
     margin-bottom: 10px;
     border: 2px solid black;
+    border-radius: 3px;
 }
 
 textarea:focus {
