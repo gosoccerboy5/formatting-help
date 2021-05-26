@@ -17,7 +17,7 @@ label {
 button {
     border: none;
     background: rgb(144, 220, 245);
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
