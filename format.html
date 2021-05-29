@@ -25,6 +25,8 @@ const number = document.querySelector("#spaces");
 const oldNumber = document.querySelector("#oldspaces");
 // Setup
 
+input.focus(); // Focus on the input area on page load, so you can instantly paste code
+
 input.oninput = function() {
     const match = this.value.match(/(\n|^) +/g);
     oldNumber.value = match === null ? 2 : match[0].length - (/^ +/.test(this.value.split("\n")[0]) ? 0 : 1);
@@ -55,11 +57,6 @@ button.addEventListener("click", function (event) {
     // That was a quite a long line. Basically, the regex matches a pattern of linebreak or string-start, then 1 or more spaces
     // The replacement pattern is a function that return a line-break, and indentation spaces proportionate to how indented the input text was
 });
-
-document.querySelector("#output").ondblclick = function () {
-    this.select();
-};
-// Select the output on double click
         </script>
     </body>
 </html>

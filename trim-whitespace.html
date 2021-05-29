@@ -27,6 +27,7 @@
     }; // Basically, detect the amount of preceding spaces on the first line, and then use that value to "guess".
 
     input.oninput(); // "Guess" the amount of spaces when the page loads.
+    input.focus(); // Focus on the input area on page load so you can instantly paste code
 
     String.prototype.times = function(amt) {
         let returnVal = "";
