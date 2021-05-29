@@ -23,7 +23,7 @@
         <script>
 (function(input, target, number, trigger) {
     input.oninput = function() {
-        number.value = /^ */gm.exec(input.value.split("\n")[0])[0].length;
+        number.value = input.value.split("\n")[0].match(/^ */gm)[0].length;
     }; // Basically, detect the amount of preceding spaces on the first line, and then use that value to "guess".
 
     input.oninput(); // "Guess" the amount of spaces when the page loads.
