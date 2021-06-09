@@ -5,20 +5,12 @@
         <link rel="stylesheet" href="./stylesheet.css" />
         <meta charset="UTF-8">
         <link rel="icon" href="favicon.ico" />
-        <style>
-#paste-code {
-    position: absolute;
-    left: 38%;
-    top: 20%;
-}
-        </style>
     </head>
     <body>
         <h1>Remove indentation wacky whitespace</h1>
         <h2>When your JS or CSS is indented along with the HTML, it will show with awkward whitespace to the left of it.</h2>
         <p>Paste it here to remove that. Don't forget to check <a href="./format">this</a> out!</p>
         <textarea id="input"></textarea>
-        <img src="paste-code.svg" id="paste-code">
         <br>
         Trim <input type="number" id="amount"> off the beginning of each line
         <br>
@@ -27,7 +19,7 @@
         <textarea id="output"></textarea>
         <br>
         <br>
-        <a href="./">Home</a>
+        <script src="https://gosoccerboy5.github.io/resources/index.js" onload="reference('https://gosoccerboy5.github.io/');"></script>
         <script>
 (function(input, target, number, trigger) {
     input.oninput = function() {
