@@ -39,7 +39,7 @@
         let _temp = "";
         const split = input.value.split("\n");
         for (let i = 0; i < split.length; i++) {
-            _temp += split[i].replace(" ".times(Number(number.value)), "")+ "\n";
+            _temp += split[i].replace(new RegExp("^" + " ".times(Number(number.value))), "")+ "\n";
         }
         target.value = _temp;
         // When the trigger is clicked,
