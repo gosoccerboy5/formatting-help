@@ -4,6 +4,14 @@
         <title>Placement of curly brackets</title>
         <link rel="stylesheet" href="./stylesheet.css">
         <meta charset="utf-8">
+        <style>
+input:focus {
+    outline: auto !important;
+    -moz-appearance: auto !important;
+    -webkit-appearance: auto !important;
+    /* Override some other settings from the other stylesheet (gosoccerboy5.github.io/resources/stylesheet.css) */
+}
+        </style>
     </head>
     <body>
         <h1>Change placement of curly brackets</h1>
@@ -13,6 +21,15 @@
         <textarea id="input" placeholder="Input text here..."></textarea>
         <br>
         <button id="button">Change curly bracket placement</button>
+        <br>
+        <div>
+        <input type="radio" name="select" id="sameline" checked>
+        <label for="sameline">Move curly bracket to same line</label>
+    </div>
+        <div>
+        <input type="radio" name="select" id="newline">
+        <label for="newline">Move curly bracket to new line</label>
+    </div>
         <br>
         <textarea id="output" placeholder="Output here."></textarea>
         <script src="https://gosoccerboy5.github.io/resources/index.js"></script>
