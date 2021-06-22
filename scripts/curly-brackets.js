@@ -1,6 +1,9 @@
 const input = document.querySelector("#input");
-console.log(input);
 const output = document.querySelector("#output");
-input.addEventListener("input", function(event) {
+const button = document.querySelector("#button");
+
+button.onclick = function(event) {
     output.value = input.value.replaceAll(/ *\n *{/g, " {");
-});
+};
+input.addEventListener("input", button.onclick);
+input.focus();
