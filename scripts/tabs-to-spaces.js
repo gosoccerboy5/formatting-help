@@ -20,7 +20,7 @@ input.oninput = function(event) {
         });
     } else {
         output.value = input.value.replaceAll(
-            new RegExp("^" + " ".times(spacesPerTabs.value) + "*", "gm"),
+            /^ */gm,
             n => "\t".times(n.length / Number(spacesPerTabs.value))
         );
     }
