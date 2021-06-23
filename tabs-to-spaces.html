@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Replace tabs with spaces</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <h1>Replacing tabs with spaces, or vice versa</h1>
+        <h2>Do you ever get frustrated when someone uses tabs and you don't like tabs,<br>or someone insists on using spaces while you prefer tabs?</h2>
+        <p>Then this is for you!</p>
+        <textarea id="input" placeholder="Input here..."></textarea>
+        <br>
+        <button id="button">Switch!</button>
+        <div>
+            <input type="radio" name="tabsorspaces" value="tabs2spaces" id="tabs2spaces" checked>
+            <label for="tabs2spaces">Tabs to spaces</label>
+        </div>
+        <div>
+            <input type="radio" name="tabsorspaces" value="spaces2tabs" id="spaces2tabs">
+            <label for="spaces2tabs">Spaces to tabs</label>
+        </div>
+        Spaces per tab:
+        <input type="number" id="spacesPerTabs">
+        <br>
+        <textarea id="output" placeholder="Output here."></textarea>
+        <script src="https://gosoccerboy5.github.io/resources/index.js"></script>
+        <script src="scripts/tabs-to-spaces.js"></script>
+    </body>
+</html>

@@ -1,5 +1,8 @@
 html {
     font-family: sans-serif;
+    tab-size: 4;
+    -moz-tab-size: 4;
+    -webkit-tab-size: 4;
 }
 
 label {
