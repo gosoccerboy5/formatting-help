@@ -13,6 +13,7 @@ button.onclick = function(event) {
         output.value = input.value.replaceAll(/\s*\n\s*{/g, " {");
     } else if (document.querySelector("#newline").checked) {
         output.value = input.value.replaceAll(/^.*{\s*$/gm, function(n) {
+            n = n.trimRight();
             return n.substring(0, n.length - 1) + "\n" + n.match(/^\s?/)[0].times(n.match(/^\s*/gi)[0].length) + "{";
         });
     }
