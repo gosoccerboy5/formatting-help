@@ -10,10 +10,10 @@ String.prototype.times = function(amt) {
 };
 button.onclick = function(event) {
     if (document.querySelector("#sameline").checked) {
-        output.value = input.value.replaceAll(/ *\n *{/g, " {");
+        output.value = input.value.replaceAll(/\s*\n\s*{/g, " {");
     } else if (document.querySelector("#newline").checked) {
-        output.value = input.value.replaceAll(/^ *.*{ *$/gm, function(n) {
-            return n.substring(0, n.length - 1) + "\n" + " ".times(n.match(/^ */gi)[0].length) + "{";
+        output.value = input.value.replaceAll(/^.*{\s*$/gm, function(n) {
+            return n.substring(0, n.length - 1) + "\n" + n.match(/^\s?/)[0].times(n.match(/^\s*/gi)[0].length) + "{";
         });
     }
 };

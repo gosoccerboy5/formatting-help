@@ -8,18 +8,16 @@
         // "Multiplies" a string.
     };
     trigger.onclick = function() {
-        let _temp = "";
-        const split = input.value.split("\n");
-        for (let i = 0; i < split.length; i++) {
-            _temp += split[i].replace(new RegExp("^" + " ".times(Number(number.value))), "")+ "\n";
-        }
-        target.value = _temp;
-        // When the trigger is clicked,
-        // it iterates through the input box, splits it by line-break, and removes the necessary spaces from each line
+        target.value = input.value.replaceAll(
+            new RegExp("^" + "\\s".times(Number(number.value)), "gm"), 
+            ""
+        );
+        // Detect number of whitespace tokens on newlines, and replace that number of whitespace tokens
+        // With an empty string
     };
 
     input.oninput = function() {
-        number.value = input.value.split("\n")[0].match(/^ */gm)[0].length;
+        number.value = input.value.split("\n")[0].match(/^\s*/gm)[0].length;
         trigger.onclick(); // Automatically update
     }; // Basically, detect the amount of preceding spaces on the first line, and then use that value to "guess".
 
