@@ -12,7 +12,7 @@
         for (let currentLine of input.value.split("\n")) { // iterate through each line of input
             if (currentLine !== "") {
                 temp += currentLine.replace(
-                    new RegExp("^" + "\\s?".times(Number(number.value))), ""
+                    new RegExp("^\\s{0," + number.value + "}"), ""
                 );
                 // regex matches string-start, then specified amount of whitespace
                 // Replaces it with empty string
