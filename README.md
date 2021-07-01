@@ -1,6 +1,7 @@
 # formatting-help
  Tools for fixing wacky formatting. Good amount of support for tabs.  
-https://gosoccerboy5.github.io/formatting-help/
+https://gosoccerboy5.github.io/formatting-help/  
+<sub>(For anyone developing locally - links in the HTML don't have a .html at the end of them, so when you click one, just slap a .html at the end of the url)</sub>
 
 ## For recreations written in Dart (cause why not):
 [trim-whitespace](https://dartpad.dev/eb896fef2a75cf4b1bb182aed65b79ae?null_safety=true)  
