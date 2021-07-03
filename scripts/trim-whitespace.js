@@ -1,12 +1,4 @@
 (function(input, target, number, trigger) {
-    String.prototype.times = function(amt) {
-        let returnVal = "";
-        for (let i = 0; i < amt; i++) {
-            returnVal += this;
-        }
-        return returnVal;
-        // "Multiplies" a string.
-    };
     trigger.onclick = function() {
         let temp = ""; // We will expand this
         for (let currentLine of input.value.split("\n")) { // iterate through each line of input

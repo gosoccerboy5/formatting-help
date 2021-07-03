@@ -7,21 +7,15 @@ const spacesPerTabs = document.querySelector("#spacesPerTabs");
 spacesPerTabs.value = "4";
 input.focus();
 
-String.prototype.times = function(amt) {
-    let temp = "";
-    for (let i = 0; i < amt; i++) temp += this;
-    return temp;
-};
-
 input.oninput = function(event) {
     if (radio.checked) {
         output.value = input.value.replaceAll(/^\t*/gm, function(n) {
-            return " ".times(n.length * Number(spacesPerTabs.value));
+            return " ".repeat(n.length * Number(spacesPerTabs.value));
         });
     } else {
         output.value = input.value.replaceAll(
             /^ */gm,
-            n => "\t".times(n.length / Number(spacesPerTabs.value))
+            n => "\t".repeat(n.length / Number(spacesPerTabs.value))
         );
     }
 };

@@ -9,7 +9,7 @@ input.focus(); // Focus on the input area on page load, so you can instantly pas
 button.onclick = function (event) {
     (function (target) {
         document.querySelector("#output").value = (
-            target.value.replaceAll(/(\n|^) +/g, n => "\n" + " ".times(n.substring(1).length * Number(number.value) / (Number(oldNumber.value))))
+            target.value.replaceAll(/(\n|^) +/g, n => "\n" + " ".repeat(n.substring(1).length * Number(number.value) / (Number(oldNumber.value))))
         );
     })(input);
     // That was a quite a long line. Basically, the regex matches a pattern of linebreak or string-start, then 1 or more spaces
@@ -29,12 +29,3 @@ input.oninput = function() {
 };
 
 input.oninput(); // Do the above on page load
-
-String.prototype.times = function (amt) {
-    let temp = "";
-    for (let i = 0; i < amt; i++) {
-        temp += this;
-    }
-    return temp;
-    // "Multiply" a string
-};
