@@ -1,5 +1,5 @@
 # formatting-help
- Tools for fixing wacky formatting. Good amount of support for tabs.  
+ Tools for fixing formatted code that isn't formatted the way you want. Good amount of support for tabs.  
 https://gosoccerboy5.github.io/formatting-help/  
 <sub>(For anyone developing locally - links in the HTML don't have a .html at the end of them, so when you click one, just slap a .html at the end of the url)</sub>
 
