@@ -1,6 +1,6 @@
-const input = document.querySelector("#input");
-const output = document.querySelector("#output");
-const button = document.querySelector("#button");
+const input = document.querySelector("#input"),
+    output = document.querySelector("#output"),
+    button = document.querySelector("#button");
 // Setup variables
 
 button.onclick = function(event) {

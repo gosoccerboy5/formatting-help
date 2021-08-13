@@ -1,7 +1,7 @@
-const input = document.querySelector("#input");
-const button = document.querySelector("#format");
-const number = document.querySelector("#spaces");
-const oldNumber = document.querySelector("#oldspaces");
+const input = document.querySelector("#input"),
+    button = document.querySelector("#format"),
+    number = document.querySelector("#spaces"),
+    oldNumber = document.querySelector("#oldspaces");
 // Setup
 
 input.focus(); // Focus on the input area on page load, so you can instantly paste code

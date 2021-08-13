@@ -1,8 +1,8 @@
-const input = document.querySelector("#input");
-const output = document.querySelector("#output");
-const button = document.querySelector("#button");
-const radio = document.querySelector("#tabs2spaces");
-const spacesPerTabs = document.querySelector("#spacesPerTabs");
+const input = document.querySelector("#input"),
+    output = document.querySelector("#output"),
+    button = document.querySelector("#button"),
+    radio = document.querySelector("#tabs2spaces"),
+    spacesPerTabs = document.querySelector("#spacesPerTabs");
 // Setup variables
 
 spacesPerTabs.value = "4";
