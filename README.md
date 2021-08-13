@@ -1,7 +1,6 @@
 # formatting-help
  Tools for fixing formatted code that isn't formatted the way you want. Good amount of support for tabs.  
 https://gosoccerboy5.github.io/formatting-help/  
-<sub>(For anyone developing locally - links in the HTML don't have a .html at the end of them, so when you click one, just slap a .html at the end of the url)</sub>
 
 ## For recreations written in Dart (cause why not):
 [trim-whitespace](https://dartpad.dev/eb896fef2a75cf4b1bb182aed65b79ae?null_safety=true)  
@@ -10,3 +9,9 @@ https://gosoccerboy5.github.io/formatting-help/
 [tabs-to-spaces](https://dartpad.dev/aec0c9059054c13e64ca4cdc2a587be8?null_safety=true)  
 Note that you can view the source at Github Gists, by taking the hash in the url and placing it after `gist.github.com`.  
 For example, `https://dartpad.dev/?null_safety=true&id=5d84d9ad08adbf16afc57b847e443e23` => `gist.github.com/5d84d9ad08adbf16afc57b847e443e23`.
+
+## Notes for anyone developing locally
+ - I'm using [jeffalo.lived](http://marketplace.visualstudio.com/items?itemname=jeffalo.lived) to start a localhost server. You may need to use this or some other form of localhost
+ - I'm using `<script>` tags that point to `https://gosoccerboy5.github.io/resources/index.js`. If you want to make a new page, do be sure to use that script, and do be sure to slap a `ref="https://gosoccerboy5.github.io/"`* attribute onto the tag. This makes sure the `<script>` tag knows the right url to reference.
+
+\*The slash at the end of the url is important
