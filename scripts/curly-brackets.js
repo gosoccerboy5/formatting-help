@@ -17,7 +17,7 @@ button.onclick = function(event) {
                 return n.substring(0, n.length - 1) + "\n" + n.match(/^\s?/)[0].repeat(n.match(/^\s*/gi)[0].length) + "{";
                 // No idea what the above line is :P
             }
-        ).replaceAll(/(\n(\s+)})\s*(.+)/g, "$1\n$2$3");
+        );
         // The above line adds a new line between `}` and tokens such as `else`
     }
 };
